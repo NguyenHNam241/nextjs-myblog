@@ -7,12 +7,10 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Medieval Mayhem Arrives With ‘Kingdom Come: Deliverance II’ on GeForce NOW',
+    description: `It’s part of seven games coming to the cloud this week, kicking off GeForce NOW’s fifth anniversary.`,
+    imgSrc: '/static/images/Kingdom-Come.jpg',
+    href: 'https://blogs.nvidia.com/blog/geforce-now-thursday-kingdom-come-deliverance-2/',
   },
   {
     title: 'The Time Machine',

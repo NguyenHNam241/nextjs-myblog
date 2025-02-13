@@ -5,9 +5,10 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import SocialIcon from '@/components/social-icons'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
+  let headerClass = 'flex flex-col items-center bg-white dark:bg-gray-950 justify-between py-10 '
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -15,7 +16,7 @@ const Header = () => {
   return (
     <header className={headerClass}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center ">
           <div className="mr-3">
             <Logo />
           </div>
@@ -28,8 +29,8 @@ const Header = () => {
           )}
         </div>
       </Link>
-      <div className="flex items-center space-x-4 leading-5 sm:-mr-6 sm:space-x-6">
-        <div className="no-scrollbar hidden max-w-40 items-center gap-x-4 overflow-x-auto sm:flex md:max-w-72 lg:max-w-96">
+      <div className="flex bg-[rgb(255,255,255)] items-center space-x-4 leading-5 sm:-mr-6 sm:space-x-6 w-full pt-6 pb-6 justify-between ">
+      <div className="no-scrollbar flex items-center gap-x-3 overflow-x-auto sm:flex w-full min-w-0 max-w-full flex-nowrap">
           {headerNavLinks
             .filter((link) => link.href !== '/')
             .map((link) => (
@@ -42,9 +43,13 @@ const Header = () => {
               </Link>
             ))}
         </div>
+        <div className='flex items-center justify-between gap-x-3'>
+        <MobileNav />
+        <SocialIcon kind="github" href={siteMetadata.github} size={6} />
+        <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
         <SearchButton />
         <ThemeSwitch />
-        <MobileNav />
+        </div>
       </div>
     </header>
   )

@@ -117,7 +117,6 @@ input:-webkit-autofill:focus {
 .katex-display {
   overflow: auto hidden;
 }
-
 .content-header-link {
   opacity: 0;
   margin-left: -24px;

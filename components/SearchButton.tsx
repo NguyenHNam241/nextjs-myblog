@@ -12,13 +12,13 @@ const SearchButton = () => {
 
     return (
       <SearchButtonWrapper aria-label="Search">
-        <svg
+        <svg 
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="hover:text-primary-500 dark:hover:text-primary-400 h-6 w-6 text-gray-900 dark:text-gray-100"
+          className="hover:text-primary-500 dark:hover:text-primary-400 h-6 w-8 text-gray-900 dark:text-gray-100 "
         >
           <path
             strokeLinecap="round"
